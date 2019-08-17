@@ -1,4 +1,4 @@
-package com.dingdang.user.user.exception;
+package com.dingdang.user.exception;
 
 /**
  * Title:

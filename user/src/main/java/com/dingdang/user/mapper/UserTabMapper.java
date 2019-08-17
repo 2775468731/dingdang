@@ -1,7 +1,7 @@
-package com.dingdang.user.user.mapper;
+package com.dingdang.user.mapper;
 
-import com.dingdang.user.user.entity.UserTab;
-import com.dingdang.user.user.entity.UserTabExample;
+import com.dingdang.user.entity.UserTab;
+import com.dingdang.user.entity.UserTabExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

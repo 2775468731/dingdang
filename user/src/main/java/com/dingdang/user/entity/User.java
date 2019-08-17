@@ -1,10 +1,28 @@
-package com.dingdang.user.user.entity;
+package com.dingdang.user.entity;
 
-public class UserTab {
+import java.io.Serializable;
+
+/**
+ * Title:
+ * Description:
+ * author :xbl
+ * Date:2019/8/17
+ * Time:21:27
+ */
+public class User implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+    /**
+     * 自增主键
+     */
     private Integer id;
-
+    /**
+     * 员工工号
+     */
     private String userId;
-
+    /**
+     * 员工姓名
+     */
     private String userName;
 
     public Integer getId() {
@@ -20,7 +38,7 @@ public class UserTab {
     }
 
     public void setUserId(String userId) {
-        this.userId = userId == null ? null : userId.trim();
+        this.userId = userId;
     }
 
     public String getUserName() {
@@ -28,6 +46,7 @@ public class UserTab {
     }
 
     public void setUserName(String userName) {
-        this.userName = userName == null ? null : userName.trim();
+        this.userName = userName;
     }
+
 }

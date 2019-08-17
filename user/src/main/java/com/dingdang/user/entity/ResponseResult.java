@@ -1,4 +1,4 @@
-package com.dingdang.user.user.entity;
+package com.dingdang.user.entity;
 
 /**
  * Title:

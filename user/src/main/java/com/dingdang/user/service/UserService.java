@@ -1,6 +1,6 @@
-package com.dingdang.user.user.service;
+package com.dingdang.user.service;
 
-import com.dingdang.user.user.entity.User;
+import com.dingdang.user.entity.User;
 
 /**
  * Title:

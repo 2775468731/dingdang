@@ -1,6 +1,6 @@
-package com.dingdang.user.user.exception;
+package com.dingdang.user.exception;
 
-import com.dingdang.user.user.entity.ResponseResult;
+import com.dingdang.user.entity.ResponseResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.MissingServletRequestParameterException;

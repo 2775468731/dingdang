@@ -1,6 +1,6 @@
-package com.dingdang.user.user.mapper;
+package com.dingdang.user.mapper;
 
-import com.dingdang.user.user.entity.User;
+import com.dingdang.user.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.ResultType;
 import org.apache.ibatis.annotations.Select;

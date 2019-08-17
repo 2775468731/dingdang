@@ -1,8 +1,8 @@
-package com.dingdang.user.user.controller;
+package com.dingdang.user.controller;
 
-import com.dingdang.user.user.exception.ExceptionEnum;
-import com.dingdang.user.user.entity.User;
-import com.dingdang.user.user.service.UserService;
+import com.dingdang.user.service.UserService;
+import com.dingdang.user.exception.ExceptionEnum;
+import com.dingdang.user.entity.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -16,7 +16,7 @@
                         password="xbl" />
 
         <!-- 指定javaBean生成的位置 -->
-        <javaModelGenerator targetPackage="com.dingdang.user.user.entity" targetProject="src/main/java" >
+        <javaModelGenerator targetPackage="com.dingdang.user.entity" targetProject="src/main/java" >
             <!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false -->
             <property name="enableSubPackages" value="true" />
             <!-- 设置是否在getter方法中，对String类型字段调用trim()方法 -->
@@ -28,7 +28,7 @@
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
         <!-- 指定dao接口生成的位置，mapper接口 -->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.dingdang.user.user.mapper" targetProject="src/main/java" >
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.dingdang.user.mapper" targetProject="src/main/java" >
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 

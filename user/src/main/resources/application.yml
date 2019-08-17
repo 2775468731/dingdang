@@ -27,7 +27,7 @@ logging:
   config: classpath:logback-boot.xml
 
 mybatis:
-  type-aliases-package: com.dingdang.user.user.entity
+  type-aliases-package: com.dingdang.user.entity
   mapper-locations: classpath*:mapper/*.xml
   configuration:
     map-underscore-to-camel-case: true

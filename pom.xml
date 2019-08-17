@@ -7,10 +7,6 @@
     <groupId>dingdang</groupId>
     <artifactId>dingdang</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>common</module>
-    </modules>
-
     <name>dingdang</name>
     <description>Demo project for Spring Boot</description>
 
@@ -21,11 +17,9 @@
         <relativePath></relativePath>
     </parent>
 
-    <!--<modules>-->
-    <!--<module>eureka</module>-->
-    <!--<module>client</module>-->
-    <!--<module>ribbo</module>-->
-    <!--</modules>-->
+    <modules>
+        <module>user</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

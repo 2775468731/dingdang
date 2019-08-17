@@ -1,4 +1,4 @@
-package com.dingdang.user.user.aspect;
+package com.dingdang.user.aspect;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -51,7 +51,7 @@ public class LogRecordAspect {
      * 第三个*号：表示方法名，*号表示所有的方法
      * 后面括弧里面表示方法的参数，两个句点表示任何参数
      */
-    @Pointcut("execution(*  com.dingdang.user.user.controller.*.*(..))")
+    @Pointcut("execution(*  com.dingdang.user.controller.*.*(..))")
     public void executionService() {
     }
 
