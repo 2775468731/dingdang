@@ -3,10 +3,31 @@ server:
 spring:
   application:
     name: server-user
+  datasource:
+    url: jdbc:mysql://106.52.185.126:3306/test?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true
+    username: root
+    password: xbl
+  aop:
+    proxy-target-class: true
+    auto: true
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
 
+logging:
+  level:
+    root: WARN
+    web: DEBUG
+    hibernate: ERROR
+    org:
+      mybatis: INFO
+    com.dingdang.user.user.mapper: DEBUG
+  config: classpath:logback-boot.xml
 
+mybatis:
+  type-aliases-package: com.dingdang.user.user.entity
+  mapper-locations: classpath*:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
