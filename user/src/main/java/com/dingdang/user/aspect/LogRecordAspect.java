@@ -2,7 +2,6 @@ package com.dingdang.user.aspect;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.serializer.SerializerFeature;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -24,8 +23,6 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import java.net.URLDecoder;
 import java.util.LinkedList;
-
-import static com.sun.xml.internal.org.jvnet.fastinfoset.FastInfosetSerializer.UTF_8;
 
 
 /**
@@ -119,17 +116,17 @@ public class LogRecordAspect {
                 if (object instanceof MultipartFile || object instanceof ServletRequest || object instanceof ServletResponse) {
                     return result;
                 }
-                params = JSON.toJSONString(object, SerializerFeature.WriteMapNullValue);
+                params = JSON.toJSONString(object);
             } else if ("GET".equals(method)) {
                 String queryString = request.getQueryString();
                 params = queryString;
             }
             if( params!=null ){
-                params = URLDecoder.decode(params, UTF_8);
+                params = URLDecoder.decode(params, "UTF-8");
                 logger.info("Params:{}", params);
             }
             long endTime = System.currentTimeMillis();
-            logger.info("responseBody:{}", JSON.toJSONString(result, SerializerFeature.WriteMapNullValue));
+            logger.info("responseBody:{}", JSON.toJSONString(result));
             if( startTimeObj instanceof Long ){
                 long startTime = (long) startTimeObj;
                 logger.info("requireTime:{}ms", (endTime - startTime));

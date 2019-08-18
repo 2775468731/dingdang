@@ -1,9 +1,8 @@
 package com.dingdang.user.controller;
 
 import com.dingdang.user.entity.UserTab;
-import com.dingdang.user.service.UserService;
 import com.dingdang.user.exception.ExceptionEnum;
-import com.dingdang.user.entity.User;
+import com.dingdang.user.service.UserService;
 import common.BaseReturn;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
