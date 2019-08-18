@@ -1,6 +1,6 @@
 package com.dingdang.user.exception;
 
-import com.dingdang.user.entity.ResponseResult;
+import common.BaseReturn;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.MissingServletRequestParameterException;
@@ -25,16 +25,16 @@ public class GlobalExceptionHandler {
     private static Logger LOGGER = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
     @ExceptionHandler
-    public ResponseResult processException(Exception ex, HttpServletRequest request, HttpServletResponse response) {
+    public BaseReturn processException(Exception ex, HttpServletRequest request, HttpServletResponse response) {
         ex.printStackTrace();
         if (ex instanceof MissingServletRequestParameterException) {
-            return new ResponseResult(400, ex.getMessage(), null);
+            return new BaseReturn(400, ex.getMessage(), null);
         }
         if (ex instanceof NoFoundExcepiton) {
             LOGGER.error("=======" + ex.getMessage() + "=======");
-            return new ResponseResult(401, "无法找到相应数据！", null);
+            return new BaseReturn(401, "无法找到相应数据！", null);
         }
-        return new ResponseResult(500, ex.getMessage(), null);
+        return new BaseReturn(500, ex.getMessage(), null);
     }
 
 }

@@ -1,6 +1,7 @@
 package com.dingdang.user.service;
 
 import com.dingdang.user.entity.User;
+import com.dingdang.user.entity.UserTab;
 
 /**
  * Title:
@@ -12,5 +13,8 @@ import com.dingdang.user.entity.User;
 public interface UserService {
 
     User selectUser(String userId);
+
+    UserTab selectTabUser(String userId);
+
 
 }

@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableTransactionManagement//开启事务管理
-@MapperScan("com.dingdang.user.user.mapper")
+@MapperScan("com.dingdang.user.mapper")
 public class UserApplication {
 
     public static void main(String[] args) {

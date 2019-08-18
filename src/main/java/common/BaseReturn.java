@@ -1,15 +1,14 @@
-package com.dingdang.user.entity;
+package common;
 
 /**
  * Title:
  * Description:
  * author :xbl
- * Date:2019/8/17
- * Time:21:28
+ * Date:2019/8/18
+ * Time:11:35
  */
-public class ResponseResult {
-
-    private Integer code;
+public class BaseReturn {
+    private Integer code = 200;
     private String msg;
     private Object data;
 
@@ -37,11 +36,23 @@ public class ResponseResult {
         this.data = data;
     }
 
-    public ResponseResult(Integer code, String msg, Object data) {
+    public BaseReturn(String msg, Object data) {
         super();
         this.code = code;
         this.msg = msg;
         this.data = data;
     }
 
+    public BaseReturn(String msg) {
+        super();
+        this.code = code;
+        this.msg = msg;
+    }
+
+    public BaseReturn(Integer code,String msg, Object data) {
+        super();
+        this.code = code;
+        this.msg = msg;
+        this.data = data;
+    }
 }

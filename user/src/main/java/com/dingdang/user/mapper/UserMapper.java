@@ -12,7 +12,6 @@ import org.apache.ibatis.annotations.Select;
  * Date:2019/8/17
  * Time:21:28
  */
-@Mapper
 public interface UserMapper {
 
     @Select("SELECT id, user_id userId, user_name userName FROM t_user_tab WHERE user_id = #{userId}")
