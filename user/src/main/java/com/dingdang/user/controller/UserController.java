@@ -1,9 +1,9 @@
 package com.dingdang.user.controller;
 
 import com.dingdang.user.entity.UserTab;
-import com.dingdang.user.exception.ExceptionEnum;
 import com.dingdang.user.service.UserService;
 import common.BaseReturn;
+import exception.ExceptionEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +29,6 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-    /**
-     * 引入日志，注意都是"org.slf4j"包下
-     */
     private final static Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Value("${mybatis.mapper-locations}")

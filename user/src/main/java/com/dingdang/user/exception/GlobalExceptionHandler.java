@@ -1,6 +1,7 @@
 package com.dingdang.user.exception;
 
 import common.BaseReturn;
+import exception.NoFoundExcepiton;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.MissingServletRequestParameterException;
