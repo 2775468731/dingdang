@@ -38,7 +38,7 @@ public class UserController {
     public BaseReturn selectUser(@PathVariable String userId, HttpServletResponse httpServletResponse) throws Exception {
         UserTab user = userService.selectTabUser(userId);
         if (user == null) {
-            logger.error(" 根据员工工号，查询员工异常：e=" + ExceptionEnum.ERROR_NOFOUND.getValue());
+            logger.error(" 根据员工工号，查询员工异常a：e=" + ExceptionEnum.ERROR_NOFOUND.getValue());
 //            throw new NoFoundExcepiton(ExceptionEnum.ERROR_NOFOUND.getValue());
         }
         Map<String,Object> map = new HashMap<>();
